@@ -27,12 +27,12 @@ Command: `DEBUG="transform:print*" jscodeshift -t transform.ts YOUR_CODEBASE_DIR
 
 ### 2: Scan for async function usages
 
-Transform file: **transform-use-async-functions.ts**
+Transform file: **transform-use-async-function.ts**
 
 After you converted some sync functions to async. Now you need to find where you use them, and add `await` to those call expressions.
 The script will also convert those functions which have `await` expression to async function.
 
-Command: `DEBUG="transform:print*" jscodeshift -t transform-use-async-functions.ts YOUR_CODEBASE_DIR --parser=tsx`
+Command: `DEBUG="transform:print*" jscodeshift -t transform-use-async-function.ts YOUR_CODEBASE_DIR --parser=tsx`
 
 _You may need to run more than one time until you got no modified file._
 
